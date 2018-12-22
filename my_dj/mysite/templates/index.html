@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load my_filters i18n %}
+
+{% block content %}
+    {% show_navbar 'index' %}
+    <div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="sidebar text-light bg-secondary pl-3 pr-3 mt-4">
+					<h4 class="pt-2 pb-2">Главные новости</h4><hr>
+					<h5>Вчера</h5><hr>
+					<p class="mb-1"><a class="text-light" href="#">Хорватия и Англия победителя не выявили</a></p>
+					<span>23:41</span><hr>
+					<p class="mb-1"><a class="text-light" href="#">Лукаку принес победу Бельгии над сборной Швейцарии</a></p>
+					<span>23:41</span><hr>
+					<p class="mb-1"><a class="text-light" href="#">Молодежная сборная России разгромила Македонию</a></p>
+					<span>23:41</span><hr>
+					<p class="mb-1"><a class="text-light" href="#">В УЕФА подозревают, что матч ПСЖ - «Црвена Звезда» был договорным</a></p>
+					<span>23:41</span><hr>
+					<p class="mb-1"><a class="text-light" href="#">«Спартак» и «Зенит» проведут матчи 1/8 финала Кубка России 1 ноября</a></p>
+					<span>23:41</span>
+				</div>
+			</div>
+			<div class="col-md-9">
+				<div class="main">
+					<div class="card-deck mt-4">
+						  <div class="card">
+						    <img class="card-img-top" src="static/img/img1.jpg" alt="Card image cap">
+						    <div class="card-body my_card_body">
+						      <p class="card-text">Хорватия и Англия футбол не завезли</p>
+						      <p class="card-text"><small class="text-muted">Сегодня, 00:53</small></p>
+						    </div>
+						  </div>
+						  <div class="card">
+						    <img class="card-img-top" src="static/img/img2.jpg" alt="Card image cap">
+						    <div class="card-body my_card_body">
+						      <p class="card-text">«Чтобы стать великим футболистом, нужно быть хорошим человеком». Мудрость юного Мбаппе
+							  </p>
+						      <p class="card-text"><small class="text-muted">Вчера, 18:59</small></p>
+						    </div>
+						  </div>
+						  <div class="card">
+						    <img class="card-img-top" src="static/img/img.png" alt="Card image cap">
+						    <div class="card-body my_card_body">
+						      <p class="card-text">Только свои. Особенная таблица РПЛ</p>
+						      <p class="card-text"><small class="text-muted">Вчера, 16:30</small></p>
+						    </div>
+						  </div>
+					</div>
+					<div class="card mb-3 mt-3">
+					  <img class="card-img-top" src="static/img/img3.jpg" alt="Card image cap">
+					  <div class="card-body">
+					    <h5 class="card-title">Сборная Кыргызстана - Чемпион Азии</h5>
+					    <p class="card-text">Сборная Кыргызстана разгромила Сборную Корею в финале, со счетом 3:0</p>
+					    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+					  </div>
+					</div>
+					<div class="card mb-3 mt-3">
+					  <img class="card-img-top" src="static/img/img2.png" alt="Card image cap">
+					  <div class="card-body">
+					    <h5 class="card-title">О футболе. «Краснодар» без Мамаева, «Зенит» без Кокорина</h5>
+					    <p class="card-text">Подвиги Саши и Паши обрастают легендами, футболисты ближайшие два месяца проведут под арестом, а «Соккер.ру» хочет поговорить о футболе. Насколько это важные потери для клубов?</p>
+					    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="index_top">
+		<a href="#link_index" class="img_up">
+			<i class="far fa-arrow-alt-circle-up"></i>
+		</a>
+	</div>
+
+	<button type="button" class="btn btn-secondary comment" data-toggle="modal" data-target="#exampleModal">
+  	Написать нам
+	</button>
+
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Появились вопросы?</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <form action="#" class="form">
+	        	<input class="form-control mt-2" type="text" placeholder="Имя">
+	        	<input class="form-control mt-2" type="text" placeholder="Email">
+	        	<textarea class="form-control my_textarea mt-2" style="max-height: 100px; min-height: 100px;" placeholder="Сообщение"></textarea>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	      	<button type="button" class="btn btn-primary" onclick="myFunction()">Отправить</button>
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="myFunction2()">Закрыть</button>  
+	      </div>
+	    </div>
+	  </div>
+	</div>
+    {% show_footer 'index' %}
+{% endblock %}
